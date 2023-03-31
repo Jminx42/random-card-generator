@@ -18,26 +18,6 @@ Create an algorithm that randomly builds a card on every refresh:
 
 In the end, the project needs to look similar to [this demo](https://github.com/breatheco-de/exercise-random-card/blob/master/preview.gif?raw=true).
 
-## 🌱  How to start this project
-
- Do not clone this repository.
-
-The first step to start coding is cloning the [vanilla.js boilerplate](https://github.com/4GeeksAcademy/vanillajs-hello.git) on your local computer or gitpod.
-
-a) If using Gitpod (recommended) you can clone the boilerplate by [clicking here](https://github.com/4GeeksAcademy/vanillajs-hello.git).
-
-b) If working locally type the following command from your command line:
-
-```sh
-
-$ git clone https://github.com/4GeeksAcademy/vanillajs-hello.git
-
-```
-
-## 💡 Important: 
-
-Remember to create a new repository, update the remote (`git remote set-url origin <your new url>`), and upload the code to your new repository using `add`, `commit` and `push`.
-
 ## 💡 Hints
 
 - Remember that the first event of a website lifecycle is [onLoad (your code starts running there)](https://www.w3schools.com/jsref/event_onload.asp). You should generate a random number between 1 and 4 to pick a suit and another random number between 0 and 12 to pick a card number.
@@ -61,3 +41,7 @@ The following requirements are not needed to sucessfully finish this project, bu
 `+1` Add a timer that generates a new card every 10 seconds.   
 
 `+1` Allow the user to specify the card width and height using text inputs.   
+
+## Technologies used:
+
+HTML, CSS, Javascript, Bootstrap
