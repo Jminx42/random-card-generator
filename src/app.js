@@ -7,23 +7,38 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   const cardSuit = ["♥", "♦", "♣", "♠"];
-  const cardOther = ["A", "J", "Q", "K"];
+  const cardPack = [
+    "A",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
 
-  let randomNumber = Math.floor(Math.random() * 13) + 1;
-  let cardSeeds = document.querySelectorAll(".card-seed");
-  let cardNumber = document.querySelector(".card-number");
+  let randomNumberForCardPack = Math.floor(Math.random() * cardPack.length);
+  const [seedTop, seedBottom] = document.querySelectorAll(".card-seed");
+  const cardNumber = document.querySelector(".card-number");
 
-  if (randomNumber == 1) {
-    cardNumber.innerHTML = cardOther[0];
-  } else if (randomNumber == 11) {
-    cardNumber.innerHTML = cardOther[1];
-  } else if (randomNumber == 12) {
-    cardNumber.innerHTML = cardOther[2];
-  } else if (randomNumber == 13) {
-    cardNumber.innerHTML = cardOther[3];
-  } else cardNumber.innerHTML = randomNumber;
+  cardNumber.innerHTML = cardPack[randomNumberForCardPack];
 
-  let randomNum = Math.floor(Math.random() * cardSuit.length);
-  cardSeeds[0].innerHTML = cardSuit[randomNum];
-  cardSeeds[1].innerHTML = cardSuit[randomNum];
+  let randomNumForCardSuit = Math.floor(Math.random() * cardSuit.length);
+  let color =
+    cardSuit[randomNumForCardSuit] === "♥" ||
+    cardSuit[randomNumForCardSuit] === "♦"
+      ? "red"
+      : "black";
+
+  seedTop.innerHTML = cardSuit[randomNumForCardSuit];
+  seedTop.style.color = color;
+  seedBottom.innerHTML = cardSuit[randomNumForCardSuit];
+  seedBottom.style.color = color;
 };
